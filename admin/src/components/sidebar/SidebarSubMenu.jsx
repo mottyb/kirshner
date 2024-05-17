@@ -3,7 +3,7 @@ import { NavLink, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   IoChevronDownOutline,
-  IoChevronForwardOutline,
+  IoChevronBackSharp,
   IoRemoveSharp,
 } from "react-icons/io5";
 
@@ -21,9 +21,9 @@ const SidebarSubMenu = ({ route }) => {
         >
           <span className="inline-flex items-center">
             <route.icon className="w-5 h-5" aria-hidden="true" />
-            <span className="ml-4 mt-1">{t(`${route.name}`)}</span>
-            <span className="pl-4 mt-1">
-              {open ? <IoChevronDownOutline /> : <IoChevronForwardOutline />}
+            <span className="mr-4 mt-1">{t(`${route.name}`)}</span>
+            <span className="pr-4 mt-1">
+              {open ? <IoChevronDownOutline /> : <IoChevronBackSharp />}
             </span>
           </span>
           {/* <DropdownIcon className="w-4 h-4" aria-hidden="true" /> */}
@@ -52,13 +52,13 @@ const SidebarSubMenu = ({ route }) => {
                       ></span>
                     </Route>
                     {/* <route.icon className="w-5 h-5" aria-hidden="true" /> */}
-                    <span className="text-xs text-gray-500 pr-1">
+                    <span className="text-xs text-gray-500 pl-1">
                       <IoRemoveSharp />
                     </span>
                     <span className="text-gray-500 hover:text-emerald-600 dark:hover:text-gray-200">
                       {t(`${child.name}`)}
                     </span>
-                    {/* <span className="ml-4">{route.name}</span> */}
+                    {/* <span className="mr-4">{route.name}</span> */}
                   </a>
                 ) : (
                   <NavLink
@@ -76,7 +76,7 @@ const SidebarSubMenu = ({ route }) => {
                         aria-hidden="true"
                       ></span>
                     </Route>
-                    <span className="text-xs text-gray-500 pr-1">
+                    <span className="text-xs text-gray-500 pl-1">
                       <IoRemoveSharp />
                     </span>
                     <span className="text-gray-500 hover:text-emerald-600 dark:hover:text-gray-200">

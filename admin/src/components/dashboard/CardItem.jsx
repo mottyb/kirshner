@@ -31,7 +31,7 @@ const CardItem = ({
         <Card className="flex h-full">
           <CardBody className="flex items-center border border-gray-200 dark:border-gray-800 w-full rounded-lg">
             <div
-              className={`flex items-center justify-center p-3 rounded-full h-12 w-12 text-center mr-4 text-lg ${className}`}
+              className={`flex items-center justify-center p-3 rounded-full h-12 w-12 text-center ml-4 text-lg ${className}`}
             >
               <Icon />
             </div>

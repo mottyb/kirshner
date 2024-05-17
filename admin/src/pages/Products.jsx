@@ -109,17 +109,6 @@ const Products = () => {
             onSubmit={handleSubmitForAll}
             className="py-3 md:pb-0 grid gap-4 lg:gap-6 xl:gap-6 xl:flex"
           >
-            <div className="flex-grow-0 sm:flex-grow md:flex-grow lg:flex-grow xl:flex-grow">
-              <UploadManyTwo
-                title="Products"
-                filename={filename}
-                isDisabled={isDisabled}
-                totalDoc={data?.totalDoc}
-                handleSelectFile={handleSelectFile}
-                handleUploadMultiple={handleUploadMultiple}
-                handleRemoveSelectFile={handleRemoveSelectFile}
-              />
-            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex-grow-0 md:flex-grow lg:flex-grow xl:flex-grow">
                 <Button
@@ -158,6 +147,18 @@ const Products = () => {
                 </Button>
               </div>
             </div>
+            <div className="flex-grow-0 sm:flex-grow md:flex-grow lg:flex-grow xl:flex-grow">
+              <UploadManyTwo
+                title="Products"
+                filename={filename}
+                isDisabled={isDisabled}
+                totalDoc={data?.totalDoc}
+                handleSelectFile={handleSelectFile}
+                handleUploadMultiple={handleUploadMultiple}
+                handleRemoveSelectFile={handleRemoveSelectFile}
+              />
+            </div>
+
           </form>
         </CardBody>
       </Card>
@@ -235,7 +236,7 @@ const Products = () => {
           <Table>
             <TableHeader>
               <tr>
-                <TableCell>
+                <TableCell className="text-right">
                   <CheckBox
                     type="checkbox"
                     name="selectAll"
@@ -244,12 +245,12 @@ const Products = () => {
                     handleClick={handleSelectAll}
                   />
                 </TableCell>
-                <TableCell>{t("ProductNameTbl")}</TableCell>
-                <TableCell>{t("CategoryTbl")}</TableCell>
-                <TableCell>{t("PriceTbl")}</TableCell>
-                <TableCell>Sale Price</TableCell>
-                <TableCell>{t("StockTbl")}</TableCell>
-                <TableCell>{t("StatusTbl")}</TableCell>
+                <TableCell className="text-right">{t("ProductNameTbl")}</TableCell>
+                <TableCell className="text-right">{t("CategoryTbl")}</TableCell>
+                <TableCell className="text-right">{t("PriceTbl")}</TableCell>
+                <TableCell className="text-right">Sale Price</TableCell>
+                <TableCell className="text-right">{t("StockTbl")}</TableCell>
+                <TableCell className="text-right">{t("StatusTbl")}</TableCell>
                 <TableCell className="text-center">{t("DetailsTbl")}</TableCell>
                 <TableCell className="text-center">
                   {t("PublishedTbl")}

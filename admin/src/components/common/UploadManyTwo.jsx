@@ -168,7 +168,7 @@ const UploadManyTwo = ({
   const { t } = useTranslation();
 
   return (
-    <div className=" lg:flex md:flex flex-grow-0">
+    <div className=" lg:flex md:flex flex-grow-0 flex-row-reverse">
       <div className="flex">
         <div ref={dRef} className="lg:flex-1 md:flex-1 mr-3 sm:flex-none">
           {(title === "Products" ||

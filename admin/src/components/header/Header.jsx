@@ -109,7 +109,7 @@ const Header = () => {
           <ul className="flex justify-end items-center flex-shrink-0 space-x-6">
             <li className="changeLanguage">
               <div className="dropdown">
-                <button className="dropbtn focus:outline-none">
+                {/* <button className="dropbtn focus:outline-none">
                   {currentLanguageCode === "de" ? (
                     <img src={de} width={16} alt="lang" className="mx-2" />
                   ) : (
@@ -124,7 +124,7 @@ const Header = () => {
                       ENGLISH
                     </span>
                   )}
-                </button>
+                </button> */}
 
                 <div className="dropdown-content">
                   <div
@@ -160,19 +160,19 @@ const Header = () => {
             </li>
 
             {/* <!-- Notifications menu --> */}
-            <li className="relative inline-block text-left" ref={nRef}>
+            <li className="relative inline-block text-right" ref={nRef}>
               <button
                 className="relative align-middle rounded-md focus:outline-none"
                 onClick={handleNotificationOpen}
               >
                 <IoNotificationsSharp className="w-5 h-5" aria-hidden="true" />
-                <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
+                <span className="absolute z-10 top-0 left-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
                   6
                 </span>
               </button>
 
               {notificationOpen && (
-                <div className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white dark:bg-gray-800 focus:outline-none">
+                <div className="origin-top-right absolute left-0 mt-2 rounded-md shadow-lg bg-white dark:bg-gray-800 focus:outline-none">
                   <div className="notification-box">
                     <Scrollbars>
                       <ul className="block text-sm border-t border-gray-100 dark:border-gray-700 rounded-md">
@@ -355,7 +355,7 @@ const Header = () => {
             </li>
 
             {/* <!-- Profile menu --> */}
-            <li className="relative inline-block text-left" ref={pRef}>
+            <li className="relative inline-block text-right" ref={pRef}>
               <button
                 className="rounded-full dark:bg-gray-500 bg-emerald-500 text-white h-8 w-8 font-medium mx-auto focus:outline-none"
                 onClick={handleProfileOpen}
@@ -372,12 +372,12 @@ const Header = () => {
               </button>
 
               {profileOpen && (
-                <ul className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 focus:outline-none">
-                  <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                <ul className="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 focus:outline-none">
+                  <li className="justify-between font-serif font-medium py-2 pr-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
                     <Link to="/dashboard">
                       <span className="flex items-center text-sm">
                         <IoGridOutline
-                          className="w-4 h-4 mr-3"
+                          className="w-4 h-4 ml-3"
                           aria-hidden="true"
                         />
                         <span>{t("Dashboard")}</span>
@@ -385,11 +385,11 @@ const Header = () => {
                     </Link>
                   </li>
 
-                  <li className="justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                  <li className="justify-between font-serif font-medium py-2 pr-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
                     <Link to="/edit-profile">
                       <span className="flex items-center text-sm">
                         <IoSettingsOutline
-                          className="w-4 h-4 mr-3"
+                          className="w-4 h-4 ml-3"
                           aria-hidden="true"
                         />
                         <span>{t("EditProfile")}</span>
@@ -399,11 +399,11 @@ const Header = () => {
 
                   <li
                     onClick={handleLogOut}
-                    className="cursor-pointer justify-between font-serif font-medium py-2 pl-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                    className="cursor-pointer justify-between font-serif font-medium py-2 pr-4 transition-colors duration-150 hover:bg-gray-100 text-gray-500 hover:text-emerald-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200"
                   >
                     <span className="flex items-center text-sm">
                       <IoLogOutOutline
-                        className="w-4 h-4 mr-3"
+                        className="w-4 h-4 ml-3"
                         aria-hidden="true"
                       />
                       <span>{t("LogOut")}</span>

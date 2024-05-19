@@ -20,7 +20,7 @@
   "FreshVegetable": "ירק טרי",
   "TopRevenueProduct": "המוצרים הרווחים ביותר",
   "Sales": "מכירות",
-  "RecentOrder": "הזמנה אחרונה",
+  "RecentOrder": "הזמנות אחרונות",
   "OrderTime": "זמן הזמנה",
   "DeliveryAddress": "כתובת למשלוח",
   "Phone": "טלפון",
@@ -953,5 +953,11 @@
   "TawkChatWidgetID": "מזהה Widget של Tawk Chat",
   "TawkChatPropertyID": "מזהה נכס צ'אט של Tawk",
   "EnableTawkChat": "הפעל את Tawk Chat",
+  "LoginPageTitle": " כניסה למערכת ניהול", 
+  "EmailTitle": "דואר אלקטרוני",
+  "PasswordTitle": "סיסמה",
   "Favicon": "Favicon"
 }
+
+
+

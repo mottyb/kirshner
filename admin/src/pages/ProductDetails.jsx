@@ -78,7 +78,7 @@ const ProductDetails = () => {
                 />
               )}
             </div>
-            <div className="w-full flex flex-col p-5 md:p-8 text-right">
+            <div className="w-full flex flex-col p-5 md:p-  8 text-right">
               <div className="mb-5 block ">
                 <div className="font-serif font-semibold py-1 text-sm">
                   <p className="text-sm text-gray-500 pr-4">

@@ -295,7 +295,7 @@ const Dashboard = () => {
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         <CardItem
-          title="Total Order"
+          title="סה''כ הזמנות"
           Icon={FiShoppingCart}
           loading={loadingOrderCount}
           quantity={dashboardOrderCount?.totalOrder || 0}
@@ -352,18 +352,18 @@ const Dashboard = () => {
       ) : error ? (
         <span className="text-center mx-auto text-red-500">{error}</span>
       ) : serviceData?.length !== 0 ? (
-        <TableContainer className="mb-8">
+        <TableContainer className="mb-8 text-center">
           <Table>
             <TableHeader>
               <tr>
-                <TableCell>{t("InvoiceNo")}</TableCell>
-                <TableCell>{t("TimeTbl")}</TableCell>
-                <TableCell>{t("CustomerName")} </TableCell>
-                <TableCell> {t("MethodTbl")} </TableCell>
-                <TableCell> {t("AmountTbl")} </TableCell>
-                <TableCell>{t("OderStatusTbl")}</TableCell>
-                <TableCell>{t("ActionTbl")}</TableCell>
-                <TableCell className="text-right">{t("InvoiceTbl")}</TableCell>
+                <TableCell className="text-center">{t("InvoiceNo")}</TableCell>
+                <TableCell className="text-center">{t("TimeTbl")}</TableCell>
+                <TableCell className="text-center">{t("CustomerName")} </TableCell>
+                <TableCell className="text-center"> {t("MethodTbl")} </TableCell>
+                <TableCell className="text-center"> {t("AmountTbl")} </TableCell>
+                <TableCell className="text-center">{t("OderStatusTbl")}</TableCell>
+                <TableCell className="text-center">{t("ActionTbl")}</TableCell>
+                <TableCell className="text-center">{t("InvoiceTbl")}</TableCell>
               </tr>
             </TableHeader>
 
